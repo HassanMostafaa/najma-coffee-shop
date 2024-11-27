@@ -1,0 +1,112 @@
+/* 
+ * footer.css
+ * Styles for footer section including quick links, social media, and newsletter
+ */
+
+.footer {
+    background-color: var(--primary-color);
+    padding: var(--spacing-xl) 0 var(--spacing-lg);
+    border-top: 1px solid var(--accent-color);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.footer-section h3 {
+    font-family: var(--font-display);
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--text-xl);
+}
+
+/* Quick Links */
+.quick-links {
+    list-style: none;
+}
+
+.quick-links li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.quick-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--transition-base);
+}
+
+.quick-links a:hover {
+    color: var(--secondary-color);
+    padding-left: var(--spacing-xs);
+}
+
+/* Social Media */
+.social-links {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: var(--text-xl);
+    transition: var(--transition-base);
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* Newsletter */
+.newsletter-form {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: var(--spacing-sm);
+    background-color: var(--accent-color);
+    border-radius: var(--radius-sm);
+    color: var(--text-color);
+}
+
+.newsletter-form button {
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  border-radius: var(--radius-sm);
+    transition: var(--transition-base);
+}
+
+.newsletter-form button:hover {
+    background-color: #b69669;
+}
+
+/* Copyright */
+.copyright {
+    text-align: center;
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--accent-color);
+    color: #888;
+    font-size: var(--text-sm);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
